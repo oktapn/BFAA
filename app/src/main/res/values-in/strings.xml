@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="lorem">lorem</string>
+    <string name="name_movie">Nama Film</string>
+
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dasbor</string>
+    <string name="title_profile">Profil</string>
+    <string name="movie">Film</string>
+    <string name="tvshow">Serial TV</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="image_movie">Gambar Film</string>
+    <string name="detail_movie">Detil Film</string>
+    <string name="detail_tvshow">Detil Serial TV</string>
+</resources>

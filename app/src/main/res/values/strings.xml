@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MovieCatalogue</string>
+    <string name="lorem">lorem</string>
+    <string name="name_movie">Name Movie</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_profile">Profile</string>
+    <string name="movie">movie</string>
+    <string name="tvshow">tvshow</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="image_movie">ImageMovie</string>
+    <string name="detail_movie">Detail Movie</string>
+    <string name="detail_tvshow">Detail TvShow</string>
+
+
+</resources>
