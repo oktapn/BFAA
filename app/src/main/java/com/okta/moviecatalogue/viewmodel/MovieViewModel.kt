@@ -1,4 +1,4 @@
-package com.okta.moviecatalogue.viewModel
+package com.okta.moviecatalogue.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -13,15 +13,11 @@ import rx.subscriptions.CompositeSubscription
 
 class MovieViewModel : ViewModel() {
     private val listMovies = MutableLiveData<List<ResultListMovie>>()
-//    private var listTvShow = MutableLiveData<List<ResultListTvShow>>()
 
     private val subscriptions = CompositeSubscription()
 
     internal val movies: LiveData<List<ResultListMovie>>
         get() = listMovies
-
-//    internal val tvShow: LiveData<List<ResultListTvShow>>
-//        get() = listTvShow
 
     internal fun setMovies(apiKey: String, language: String, service: Service){
         val subscription = service.getMovie( object : Service.GetMovieCallback{
@@ -41,23 +37,4 @@ class MovieViewModel : ViewModel() {
 
         subscriptions.add(subscription)
     }
-
-//    internal fun setTvshows(apiKey: String, language: String, service: Service){
-//        val subscription = service.getTvShow( object : Service.GetTvshowCallback{
-//            override fun onSuccess(response: ResponseTvShow) {
-//                if (response.resultListTvShows.isNotEmpty()){
-//                    listTvShow.postValue(response.resultListTvShows)
-//                    Log.e("TAGSS","isnotempty")
-//                }
-//                Log.e("TAGSS","isempty")
-//            }
-//
-//            override fun onError(networkError: NetworkError) {
-//                Log.d("Failure", networkError.appErrorMessage)
-//            }
-//
-//        },apiKey, language)
-//
-//        subscriptions.add(subscription)
-//    }
 }

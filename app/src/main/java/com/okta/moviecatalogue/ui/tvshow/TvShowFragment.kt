@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.okta.moviecatalogue.BuildConfig
@@ -18,7 +18,7 @@ import com.okta.moviecatalogue.networking.Service
 import com.okta.moviecatalogue.ui.adapter.RVTvShowAdapter
 import com.okta.moviecatalogue.ui.detail.DetailActivity
 import com.okta.moviecatalogue.utils.BaseAppFragment
-import com.okta.moviecatalogue.viewModel.TvShowViewModel
+import com.okta.moviecatalogue.viewmodel.TvShowViewModel
 import kotlinx.android.synthetic.main.fragment_tvshow.*
 import javax.inject.Inject
 
@@ -43,7 +43,7 @@ class TvShowFragment : BaseAppFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         deps.inject(this)
-        tvShowViewModel = ViewModelProviders.of(this).get(TvShowViewModel::class.java)
+        tvShowViewModel = ViewModelProvider(this).get(TvShowViewModel::class.java)
         tvShowViewModel.tvShow.observe(this,getTvshow)
         tvShowViewModel.setTvshows(BuildConfig.TSDB_API_KEY,"en-US", service)
 

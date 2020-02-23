@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.okta.moviecatalogue.BuildConfig
@@ -19,7 +19,7 @@ import com.okta.moviecatalogue.ui.adapter.RVMovieAdapter
 import com.okta.moviecatalogue.ui.detail.DetailActivity
 import com.okta.moviecatalogue.ui.home.HomeFragment
 import com.okta.moviecatalogue.utils.BaseAppFragment
-import com.okta.moviecatalogue.viewModel.MovieViewModel
+import com.okta.moviecatalogue.viewmodel.MovieViewModel
 import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
 
@@ -57,7 +57,7 @@ class MovieFragment : BaseAppFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         deps.inject(this)
-        movieViewModel = ViewModelProviders.of(this).get(MovieViewModel::class.java)
+        movieViewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
         movieViewModel.movies.observe(this,getMovies)
         movieViewModel.setMovies(BuildConfig.TSDB_API_KEY,"en-US", service)
 

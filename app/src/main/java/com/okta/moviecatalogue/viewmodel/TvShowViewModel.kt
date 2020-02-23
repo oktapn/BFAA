@@ -1,4 +1,4 @@
-package com.okta.moviecatalogue.viewModel
+package com.okta.moviecatalogue.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData

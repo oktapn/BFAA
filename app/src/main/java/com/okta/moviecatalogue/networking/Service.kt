@@ -23,12 +23,10 @@ class Service(private val networkService: NetworkService) {
                 }
 
                 override fun onError(e: Throwable) {
-                    Log.e("TAGS",e.message)
                     getMovieCallback.onError(NetworkError(e))
                 }
 
                 override fun onNext(responseProduct: ResponseMovie) {
-                    Log.e("TAGS",responseProduct.toString())
                     getMovieCallback.onSuccess(responseProduct)
                 }
             })
@@ -51,7 +49,6 @@ class Service(private val networkService: NetworkService) {
                 }
 
                 override fun onError(e: Throwable) {
-                    Log.e("TAGS",e.message)
                     getTvshowCallback.onError(NetworkError(e))
                 }
 

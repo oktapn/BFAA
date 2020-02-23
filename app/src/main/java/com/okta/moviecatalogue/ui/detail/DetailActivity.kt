@@ -25,15 +25,15 @@ class DetailActivity : AppCompatActivity() {
 
         val actionbar = supportActionBar
         //set back button
-        actionbar!!.setDisplayHomeAsUpEnabled(true)
-        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
 
         if (intent != null) {
             val type = intent.getStringExtra(TYPE)
             when(type){
                 MOVIE -> {
                     //set actionbar title
-                    actionbar.title = getString(R.string.detail_movie)
+                    actionbar?.title = getString(R.string.detail_movie)
                     val movie = intent.getParcelableExtra(EXTRA_MOVIE) as ResultListMovie
                     txt_description_dtl.text = movie.overview
                     txt_name_dtl.text = movie.title
@@ -42,7 +42,7 @@ class DetailActivity : AppCompatActivity() {
                         .into(img_photo_dtl)
                 }
                 TV -> {
-                    actionbar.title = getString(R.string.detail_tvshow)
+                    actionbar?.title = getString(R.string.detail_tvshow)
                     val tvShow = intent.getParcelableExtra(EXTRA_MOVIE) as ResultListTvShow
                     txt_description_dtl.text = tvShow.overview
                     txt_name_dtl.text = tvShow.name

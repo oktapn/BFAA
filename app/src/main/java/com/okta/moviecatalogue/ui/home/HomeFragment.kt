@@ -25,14 +25,15 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val sectionsPagerAdapter =
-            SectionsPagerAdapter(context!!, fragmentManager!!)
+        val sectionsPagerAdapter = SectionsPagerAdapter(context!!, fragmentManager!!)
         view_pager.adapter = sectionsPagerAdapter
         tabs.setupWithViewPager(view_pager)
-        (activity as AppCompatActivity).supportActionBar?.setHomeButtonEnabled(false)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayShowHomeEnabled(false)
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_home)
+        (activity as AppCompatActivity).supportActionBar?.apply {
+            setHomeButtonEnabled(false)
+            setDisplayHomeAsUpEnabled(false)
+            setDisplayShowHomeEnabled(false)
+            title = getString(R.string.title_home)
+        }
     }
 
 
