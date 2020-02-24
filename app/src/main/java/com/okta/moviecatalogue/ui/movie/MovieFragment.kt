@@ -58,7 +58,7 @@ class MovieFragment : BaseAppFragment() {
         super.onViewCreated(view, savedInstanceState)
         deps.inject(this)
         movieViewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
-        movieViewModel.movies.observe(this,getMovies)
+        movieViewModel.movies.observe(viewLifecycleOwner,getMovies)
         movieViewModel.setMovies(BuildConfig.TSDB_API_KEY,"en-US", service)
 
         pb_movie_fragment.visibility = View.VISIBLE

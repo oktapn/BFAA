@@ -13,7 +13,7 @@ import javax.inject.Singleton
  * Created by okta on 11/13/2018.
  */
 @Singleton
-@Component(modules = arrayOf(NetworkModule::class))
+@Component(modules = [NetworkModule::class])
 interface Deps {
 
     fun inject(mainActivity: MainActivity)

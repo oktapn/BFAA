@@ -26,7 +26,6 @@ class DetailActivity : AppCompatActivity() {
         val actionbar = supportActionBar
         //set back button
         actionbar?.setDisplayHomeAsUpEnabled(true)
-        actionbar?.setDisplayHomeAsUpEnabled(true)
 
         if (intent != null) {
             val type = intent.getStringExtra(TYPE)
