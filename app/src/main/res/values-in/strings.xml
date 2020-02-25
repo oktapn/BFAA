@@ -13,4 +13,5 @@
     <string name="image_movie">Gambar Film</string>
     <string name="detail_movie">Detil Film</string>
     <string name="detail_tvshow">Detil Serial TV</string>
+    <string name="title_favorite">Favorit</string>
 </resources>

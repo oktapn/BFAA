@@ -12,6 +12,10 @@
     <string name="image_movie">ImageMovie</string>
     <string name="detail_movie">Detail Movie</string>
     <string name="detail_tvshow">Detail TvShow</string>
+    <string name="title_favorite">Favorite</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

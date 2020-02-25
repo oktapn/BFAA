@@ -9,7 +9,7 @@ import com.okta.moviecatalogue.R
 import com.okta.moviecatalogue.ui.movie.MovieFragment
 import com.okta.moviecatalogue.ui.tvshow.TvShowFragment
 
-class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class HomePagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     @StringRes
     private val tabTitles = intArrayOf(
